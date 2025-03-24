@@ -11,3 +11,4 @@ const Gradient textGradient = LinearGradient(
 const titleColor = Color(0xFF2F2E2E);
 const hintsColor=Color(0xff565353);
 const primaryColor=Color(0xFF94080A);
+const primaryTextColor=Color(0xff404040);

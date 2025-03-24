@@ -30,6 +30,7 @@ class _UserNameTextInputFieldState extends State<UserNameTextInputField> {
       ),
       TextField(
         controller: widget.controller,
+        style: inputText(),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8), // Rounded corners
@@ -78,6 +79,7 @@ class _UserNameTextInputFieldState extends State<UserNameTextInputField> {
         textInputAction: TextInputAction.next,
         maxLines: 1,
         maxLength: 20,
+
       ),
     ]);
   }

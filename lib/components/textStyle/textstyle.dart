@@ -33,3 +33,12 @@ TextStyle checkBoxText(
     fontStyle: FontStyle.normal, // Make it italic
   );
 }
+inputText(
+    {Color textColor = primaryTextColor, FontWeight fontWeight = FontWeight.w500}) {
+  return TextStyle(
+    fontSize: 14, // Change font size
+    fontWeight: fontWeight, // Make it medium bold
+    color: textColor, // Change hint text color
+    fontStyle: FontStyle.normal, // Make it italic
+  );
+}
