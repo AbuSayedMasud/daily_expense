@@ -1,3 +1,4 @@
+import 'package:daily_expense/components/textEditField/passwordinputfield.dart';
 import 'package:flutter/material.dart';
 
 import 'components/textEditField/username.dart';
@@ -32,35 +33,48 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SizedBox(
-      height: double.infinity,
-      width: double.infinity,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 16, top: 40, right: 16, bottom: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            const Image(
-              height: 250,
-              width: 300,
-              image: AssetImage('assets/images/banner_image.png'),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: UserNameTextInputField(title: "Username",controller:usernameController),
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding:
+              const EdgeInsets.only(left: 16, top: 50, right: 16, bottom: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              const Image(
+                height: 200,
+                width: 300,
+                image: AssetImage('assets/images/banner_image.png'),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: UserNameTextInputField(
+                    title: "Username", controller: usernameController),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: PasswordInputField(
+                    title: "Password",
+                    controller: passwordController,
+                    placeholderText: "Enter your password"),
+              ),
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }
