@@ -1,3 +1,4 @@
+import 'package:daily_expense/components/customButton/submittbutton.dart';
 import 'package:daily_expense/components/textEditField/passwordinputfield.dart';
 import 'package:flutter/material.dart';
 
@@ -71,6 +72,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     controller: passwordController,
                     placeholderText: "Enter your password"),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                child: SubmitButton(onButtonClick: () {}),
+              )
             ],
           ),
         ),

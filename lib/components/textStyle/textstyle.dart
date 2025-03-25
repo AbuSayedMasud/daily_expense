@@ -42,3 +42,13 @@ inputText(
     fontStyle: FontStyle.normal, // Make it italic
   );
 }
+
+submitText(
+    { FontWeight fontWeight = FontWeight.w600}) {
+  return TextStyle(
+    fontSize: 16, // Change font size
+    fontWeight: fontWeight, // Make it medium bold
+    fontStyle: FontStyle.normal, // Make it italic
+    color: Colors.white
+  );
+}
