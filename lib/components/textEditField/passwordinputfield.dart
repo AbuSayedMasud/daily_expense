@@ -78,6 +78,7 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
           enableSuggestions: false, // Disable suggestions for password
           autocorrect: false, // Disable autocorrect for password
         ),
+
       ],
     );
   }

@@ -1,5 +1,7 @@
+import 'package:daily_expense/components/color/colors.dart';
 import 'package:daily_expense/components/customButton/submittbutton.dart';
 import 'package:daily_expense/components/textEditField/passwordinputfield.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'components/textEditField/username.dart';
@@ -78,6 +80,60 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: SubmitButton(onButtonClick: () {}),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: RichText(
+                    text: TextSpan(
+                        text: "Are you already registered? ",
+                        style: TextStyle(color: titleColor, fontSize: 14),
+                        children: [
+                      TextSpan(
+                          text: "Sign Up",
+                          style: TextStyle(
+                              color: primaryColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500),
+                          recognizer: TapGestureRecognizer()..onTap = () {})
+                    ])),
+              ),
+              SizedBox(height: 16),
+              Align(
+                alignment: Alignment.center,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 100,
+                      child: Divider(
+                        color: Color(0xffeeeeee),
+                        thickness: 2,
+                        endIndent: 10, // Add spacing before 'or'
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
+                      child: Text(
+                        "OR",
+                        style: TextStyle(
+                            color: primaryColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 100,
+                      child: Divider(
+                        color: Color(0xffeeeeee),
+                        thickness: 2,
+                        indent: 10,
+                      ),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
