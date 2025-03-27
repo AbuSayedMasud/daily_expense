@@ -3,6 +3,7 @@ import 'package:daily_expense/components/customButton/submittbutton.dart';
 import 'package:daily_expense/components/textEditField/passwordinputfield.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'components/textEditField/username.dart';
 
@@ -110,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 100,
                       child: Divider(
                         color: Color(0xffeeeeee),
-                        thickness: 2,
+                        thickness: 1,
                         endIndent: 10, // Add spacing before 'or'
                       ),
                     ),
@@ -128,12 +129,58 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 100,
                       child: Divider(
                         color: Color(0xffeeeeee),
-                        thickness: 2,
+                        thickness: 1,
                         indent: 10,
                       ),
                     ),
                   ],
                 ),
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  FloatingActionButton(
+                    onPressed: () {},
+                    backgroundColor: primaryColor,
+                    elevation: 4,
+                    shape: CircleBorder(),
+                      child: FaIcon(
+                        FontAwesomeIcons.google,
+                        color: Colors.white,
+                        size: 24,
+                      )
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  FloatingActionButton(
+                    onPressed: () {},
+                    backgroundColor: primaryColor,
+                    elevation: 4,
+                    shape: CircleBorder(),
+                      child: FaIcon(
+                        FontAwesomeIcons.facebookF,
+                        color: Colors.white,
+                        size: 24,
+                      )
+                  ),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  FloatingActionButton(
+                      onPressed: () {},
+                      backgroundColor: primaryColor,
+                      elevation: 4,
+                      shape: CircleBorder(),
+                      child: FaIcon(
+                        FontAwesomeIcons.xTwitter,
+                        color: Colors.white,
+                        size: 24,
+                      )
+                  )
+                ],
               )
             ],
           ),
