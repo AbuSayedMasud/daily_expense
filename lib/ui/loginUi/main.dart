@@ -1,11 +1,12 @@
 import 'package:daily_expense/components/color/colors.dart';
 import 'package:daily_expense/components/customButton/submittbutton.dart';
 import 'package:daily_expense/components/textEditField/passwordinputfield.dart';
+import 'package:daily_expense/ui/registrationUi/registration.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'components/textEditField/username.dart';
+import '../../components/textEditField/username.dart';
 
 void main() {
   runApp(const MyApp());
@@ -98,7 +99,14 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: primaryColor,
                               fontSize: 14,
                               fontWeight: FontWeight.w500),
-                          recognizer: TapGestureRecognizer()..onTap = () {})
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          RegistrationScreen()));
+                            })
                     ])),
               ),
               SizedBox(height: 16),
@@ -142,30 +150,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   FloatingActionButton(
-                    onPressed: () {},
-                    backgroundColor: primaryColor,
-                    elevation: 4,
-                    shape: CircleBorder(),
+                      onPressed: () {},
+                      backgroundColor: primaryColor,
+                      elevation: 4,
+                      shape: CircleBorder(),
                       child: FaIcon(
                         FontAwesomeIcons.google,
                         color: Colors.white,
                         size: 24,
-                      )
-                  ),
+                      )),
                   SizedBox(
                     width: 20,
                   ),
                   FloatingActionButton(
-                    onPressed: () {},
-                    backgroundColor: primaryColor,
-                    elevation: 4,
-                    shape: CircleBorder(),
+                      onPressed: () {},
+                      backgroundColor: primaryColor,
+                      elevation: 4,
+                      shape: CircleBorder(),
                       child: FaIcon(
                         FontAwesomeIcons.facebookF,
                         color: Colors.white,
                         size: 24,
-                      )
-                  ),
+                      )),
                   SizedBox(
                     width: 20,
                   ),
@@ -178,8 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         FontAwesomeIcons.xTwitter,
                         color: Colors.white,
                         size: 24,
-                      )
-                  )
+                      ))
                 ],
               )
             ],
