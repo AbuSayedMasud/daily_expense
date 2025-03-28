@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                child: SubmitButton(onButtonClick: () {}),
+                child: SubmitButton(onButtonClick: () {}, value: 'Sign In',),
               ),
               SizedBox(
                 height: 16,

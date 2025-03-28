@@ -5,8 +5,9 @@ import '../textStyle/textstyle.dart';
 
 class SubmitButton extends StatefulWidget {
   final VoidCallback onButtonClick;
+  final String value;
 
-  const SubmitButton({super.key, required this.onButtonClick});
+  const SubmitButton({super.key, required this.onButtonClick,required this.value});
 
   @override
   State<SubmitButton> createState() => _SubmitButtonState();
@@ -31,7 +32,7 @@ class _SubmitButtonState extends State<SubmitButton> {
         child: Align(
           alignment: Alignment.center,
           child: Text(
-            "Sign In",
+            widget.value,
             style: submitText(), // Assuming submitText() is your custom text style
           ),
         ),

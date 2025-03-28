@@ -1,7 +1,5 @@
 import 'package:daily_expense/components/color/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   final bool showBackButton;
@@ -15,24 +13,24 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Positioned.fill(
-            child: Lottie.asset(
-              'assets/lottie/topbarbackground.json',
-              fit: BoxFit.fill,
-            ),
-          ),
+          // Positioned.fill(
+          //   child: Lottie.asset(
+          //     'assets/lottie/topbarbackground.json',
+          //     fit: BoxFit.fill,
+          //   ),
+          // ),
 
           AppBar(
-            backgroundColor: Colors.transparent,
+            backgroundColor: primaryColor,
             elevation: 4,
             title: Text(
               title,
-              style: TextStyle(color: primaryColor, fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
             ),
             centerTitle: false,
             leading: showBackButton
                 ? IconButton(
-              icon: Icon(Icons.arrow_back_ios_new, color: primaryColor),
+              icon: Icon(Icons.arrow_back_ios_new, color: Colors.white),
               onPressed: () => Navigator.pop(context),
             )
                 : null,
