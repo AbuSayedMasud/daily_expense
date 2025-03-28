@@ -76,6 +76,7 @@ flutter:
   assets:
     - assets/images/banner_image.png
     - assets/lottie/topbarbackground.json
+    - assets/images/ic_gallery.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -70,11 +70,70 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     width: double.infinity,
                     height: 150,
                     alignment: Alignment.center,
-                    color: Colors.grey.shade50,
                     child: Padding(
                       padding: EdgeInsets.all(12),
                       child: Row(
-
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white, // Background color
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(color: primaryColor, width: 1),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 2,
+                                  spreadRadius: .5,
+                                  offset: Offset(0, 0),
+                                ),
+                              ],
+                            ),
+                            child: Expanded(
+                              flex: 2,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.asset(
+                                  "assets/images/ic_gallery.png",
+                                  // Example image
+                                  width: 150,
+                                  height: 150,
+                                  fit: BoxFit.fill,
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                            flex: 3,
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  ShaderMask(
+                                    shaderCallback: (Rect bounds) {
+                                      return textGradient.createShader(bounds);
+                                    },
+                                    child: Text(
+                                      "Select your photos",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors
+                                            .white, // Required, but overridden by shader
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    "JPG, JPEG, PNG",
+                                    style: TextStyle(
+                                        color: Colors.grey,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 14),
+                                  )
+                                ]),
+                          )
+                        ],
                       ),
                     )),
               ),
@@ -84,9 +143,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                 child: SubmitButton(
-                  onButtonClick: () {
-
-                  },
+                  onButtonClick: () {},
                   value: 'Submit',
                 ),
               ),
