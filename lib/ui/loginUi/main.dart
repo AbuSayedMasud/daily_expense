@@ -64,7 +64,12 @@ class _MyHomePageState extends State<MyHomePage> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: UserNameTextInputField(
-                    title: "Username", controller: usernameController),
+                  title: "Username",
+                  controller: usernameController,
+                  onCheckChanged: (bool value) {
+                    print(value.toString());
+                  },
+                ),
               ),
               const SizedBox(
                 height: 16,
@@ -81,7 +86,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                child: SubmitButton(onButtonClick: () {}, value: 'Sign In',),
+                child: SubmitButton(
+                  onButtonClick: () {},
+                  value: 'Sign In',
+                ),
               ),
               SizedBox(
                 height: 16,

@@ -6,9 +6,10 @@ import '../textStyle/textstyle.dart';
 class UserNameTextInputField extends StatefulWidget {
   final String title;
   final TextEditingController controller;
+  final ValueChanged<bool> onCheckChanged; // Callback function
 
   const UserNameTextInputField(
-      {super.key, required this.title, required this.controller});
+      {super.key, required this.title, required this.controller, required this.onCheckChanged});
 
   @override
   State<UserNameTextInputField> createState() => _UserNameTextInputFieldState();
@@ -66,6 +67,7 @@ class _UserNameTextInputFieldState extends State<UserNameTextInputField> {
                         setState(() {
                           isChecked = value!;
                         });
+                        widget.onCheckChanged(isChecked);
                       },
                       activeColor: primaryColor,
                       side: BorderSide(color: primaryColor, width: 1.2),
