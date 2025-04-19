@@ -67,75 +67,76 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 radius: Radius.circular(10),
                 // Corner radius
                 child: Container(
-                    width: double.infinity,
-                    height: 150,
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.all(12),
-                      child: Row(
-                        children: [
-                          Container(
+                  width: double.infinity,
+                  height: 150,
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: EdgeInsets.all(12),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 2,
+                          child: Container(
                             decoration: BoxDecoration(
-                              color: Colors.white, // Background color
+                              color: Colors.white,
                               borderRadius: BorderRadius.circular(12),
                               border: Border.all(color: primaryColor, width: 1),
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey,
                                   blurRadius: 2,
-                                  spreadRadius: .5,
+                                  spreadRadius: 0.5,
                                   offset: Offset(0, 0),
                                 ),
                               ],
                             ),
-                            child: Expanded(
-                              flex: 2,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.asset(
-                                  "assets/images/ic_gallery.png",
-                                  // Example image
-                                  width: 150,
-                                  height: 150,
-                                  fit: BoxFit.fill,
-                                ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(
+                                "assets/images/ic_gallery.png",
+                                width: 150,
+                                height: 150,
+                                fit: BoxFit.fill,
                               ),
                             ),
                           ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Expanded(
-                            flex: 3,
-                            child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  ShaderMask(
-                                    shaderCallback: (Rect bounds) {
-                                      return textGradient.createShader(bounds);
-                                    },
-                                    child: Text(
-                                      "Select your photos",
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors
-                                            .white, // Required, but overridden by shader
-                                      ),
-                                    ),
+                        ),
+                        SizedBox(width: 20),
+                        Expanded(
+                          flex: 3,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              ShaderMask(
+                                shaderCallback: (Rect bounds) {
+                                  return textGradient.createShader(bounds);
+                                },
+                                child: Text(
+                                  "Select your photos",
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white, // Overridden by shader
                                   ),
-                                  Text(
-                                    "JPG, JPEG, PNG",
-                                    style: TextStyle(
-                                        color: Colors.grey,
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 14),
-                                  )
-                                ]),
-                          )
-                        ],
-                      ),
-                    )),
+                                ),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                "JPG, JPEG, PNG",
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
               SizedBox(
                 height: 30,

@@ -161,6 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       onPressed: () {},
                       backgroundColor: primaryColor,
                       elevation: 4,
+                      heroTag: 'fab1',
                       shape: CircleBorder(),
                       child: FaIcon(
                         FontAwesomeIcons.google,
@@ -174,6 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       onPressed: () {},
                       backgroundColor: primaryColor,
                       elevation: 4,
+                      heroTag: 'fab2',
                       shape: CircleBorder(),
                       child: FaIcon(
                         FontAwesomeIcons.facebookF,
@@ -188,6 +190,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       backgroundColor: primaryColor,
                       elevation: 4,
                       shape: CircleBorder(),
+                      heroTag: 'fab3',
                       child: FaIcon(
                         FontAwesomeIcons.xTwitter,
                         color: Colors.white,
